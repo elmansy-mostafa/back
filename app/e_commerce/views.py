@@ -299,13 +299,13 @@ class CheckedCartViewSet(viewsets.ModelViewSet):
     serializer_class = serializers.CheckedCartSerializer
     queryset = models.CheckedCart.objects.all()
 
-    def get_permissions(self):
+    # def get_permissions(self):
 
-        if self.action == 'retrieve' or self.action == 'list' or self.action == 'create':
-            permission_classes = [IsAuthenticated]
-        else:
-            permission_classes = [IsAdminUser]
-        return [permission() for permission in permission_classes]
+    #     if self.action == 'retrieve' or self.action == 'list' or self.action == 'create':
+    #         permission_classes = [IsAuthenticated]
+    #     else:
+    #         permission_classes = [IsAdminUser]
+    #     return [permission() for permission in permission_classes]
 
 
     def list(self, request, pk= None, *args, **kwargs):
@@ -327,10 +327,10 @@ class CheckedCartItemViewSet(viewsets.ModelViewSet):
     serializer_class = serializers.CheckedCartItemSerializer
     queryset = models.CheckedCartItem.objects.all()
 
-    def get_permissions(self):
+    # def get_permissions(self):
 
-        if self.action == 'retrieve' or self.action == 'list' or self.action == 'create':
-            permission_classes = [IsAuthenticated]
-        else:
-            permission_classes = [IsAdminUser]
-        return [permission() for permission in permission_classes]
+    #     if self.action == 'retrieve' or self.action == 'list' or self.action == 'create':
+    #         permission_classes = [IsAuthenticated]
+    #     else:
+    #         permission_classes = [IsAdminUser]
+    #     return [permission() for permission in permission_classes]
