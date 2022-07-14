@@ -301,7 +301,7 @@ class CheckedCartViewSet(viewsets.ModelViewSet):
 
     def get_permissions(self):
 
-        if self.action == 'retrieve' or self.action == 'list':
+        if self.action == 'retrieve' or self.action == 'list' or self.action == 'create':
             permission_classes = [IsAuthenticated]
         else:
             permission_classes = [IsAdminUser]
